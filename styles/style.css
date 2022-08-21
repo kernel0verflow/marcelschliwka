@@ -50,6 +50,14 @@ body {
   color: var(--main-text-color);
 }
 
+body.invert {
+  --main-bg-color: #dfdfdf;
+  --main-text-color: #141414;
+  --darker-text-color: #b8b8b8;
+  --purple-color: #cb06d9;
+  --yellow-color: #c1de04;
+  --blue-color: #03bfee;
+}
 header,
 main,
 footer {
@@ -70,6 +78,13 @@ a {
   text-decoration: none;
 }
 
+nav > ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
 /* ANCHOR Classes */
 .text-grey {
   color: var(--darker-text-color);
@@ -84,6 +99,16 @@ a {
 
 .link-purple {
   color: var(--purple-color);
+}
+
+.link-purple:hover {
+  color: var(--main-bg-color);
+  background-color: var(--purple-color);
+}
+
+.link-blue:hover {
+  color: var(--main-bg-color);
+  background-color: var(--blue-color);
 }
 .link-blue {
   color: var(--blue-color);
