@@ -1,9 +1,17 @@
-/* Global Variables */
+/* ANCHOR Global*/
 :root {
   --main-bg-color: #191919;
   --main-text-color: #e1e1e1;
+  --darker-text-color: #979797;
+  --purple-color: #cb06d9;
+  --yellow-color: #c1de04;
+  --blue-color: #03bfee;
+  --font: "Inconsolata", monospace;
+  --line: 3ch;
+  --font-scale: 0.5vw;
 }
-/* Font Import */
+
+/* ANCHOR Fonts */
 @font-face {
   font-family: "Inconsolata";
   src: url(../fonts/Inconsolata-Medium.ttf) format("truetype");
@@ -26,11 +34,61 @@
   font-display: swap;
 }
 
+/* ANCHOR Main */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Inconsolata", monospace;
+  margin: 0;
+  font-family: var(--font);
   font-weight: 500;
   font-style: normal;
-  font-size: 1rem;
+  line-height: var(--line);
+  font-size: calc(1rem + var(--font-scale));
   background-color: var(--main-bg-color);
   color: var(--main-text-color);
+}
+
+header,
+main,
+footer {
+  width: 100%;
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+h1 {
+  color: var(--blue-color);
+  font-size: calc(1.6rem + var(--font-scale));
+  font-weight: 300;
+  line-height: var(--line);
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+
+/* ANCHOR Classes */
+.text-grey {
+  color: var(--darker-text-color);
+}
+.text-purple {
+  color: var(--purple-color);
+}
+
+.text-green {
+  color: var(--yellow-color);
+}
+
+.link-purple {
+  color: var(--purple-color);
+}
+.link-blue {
+  color: var(--blue-color);
+}
+/* ANCHOR ID's */
+#page-logo {
+  cursor: pointer;
 }
